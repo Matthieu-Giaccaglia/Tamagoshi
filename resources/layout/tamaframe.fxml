@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="230.0" prefWidth="230.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tamagoshi.controller.TamaFrameController">
+    <Label fx:id="labelNom" alignment="CENTER" contentDisplay="CENTER" text="ExempleNom">
+        <VBox.margin>
+          <Insets top="10.0" />
+        </VBox.margin>
+      <font>
+         <Font name="Pixel Sans Serif Regular" size="10.0" />
+      </font>
+    </Label>
+    <ImageView fx:id="imageTama" fitHeight="120.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
+        <Image url="@../raw/tamagoshi/joueur/normal.png" />
+        <VBox.margin>
+         <Insets bottom="10.0" top="10.0" />
+        </VBox.margin>
+    </ImageView>
+   <Label fx:id="labelStatus" alignment="CENTER" maxWidth="200.0" minWidth="200.0" prefHeight="40.0" prefWidth="200.0" text="Je suis affamé et je m'ennuie à mourir." textAlignment="CENTER" wrapText="true">
+      <font>
+         <Font name="Pixel Sans Serif Regular" size="9.0" />
+      </font></Label>
+    <ButtonBar buttonOrder="U+" prefHeight="40.0" prefWidth="200.0">
+      <buttons>
+          <Button fx:id="boutonNourrir" disable="true" mnemonicParsing="false" onAction="#tamaNourrir" text="%button.feed">
+            <font>
+               <Font name="Pixel Sans Serif Regular" size="10.0" />
+            </font></Button>
+          <Button fx:id="boutonJouer" disable="true" mnemonicParsing="false" onAction="#tamaJouer" text="%button.play">
+            <font>
+               <Font name="Pixel Sans Serif Regular" size="10.0" />
+            </font></Button>
+      </buttons>
+    </ButtonBar>
+</VBox>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="TOP_CENTER" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tamagoshi.controller.InsertNewScoreController">
+   <children>
+      <Label alignment="CENTER" text="%label.title">
+         <font>
+            <Font name="Pixel Sans Serif Regular" size="48.0" />
+         </font>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </Label>
+      <Label fx:id="labelDesc" text="%label.desc">
+         <font>
+            <Font name="Pixel Sans Serif Regular" size="13.0" />
+         </font></Label>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <TextField fx:id="textFieldName1" alignment="CENTER" maxHeight="75.0" maxWidth="75.0" minHeight="75.0" minWidth="75.0" prefHeight="75.0" prefWidth="75.0" promptText="%textField.1.prompt">
+               <font>
+                  <Font name="Pixel Sans Serif Regular" size="64.0" />
+               </font>
+               <HBox.margin>
+                  <Insets right="5.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="textFieldName2" alignment="CENTER" maxHeight="75.0" maxWidth="75.0" minHeight="75.0" minWidth="75.0" prefHeight="75.0" prefWidth="75.0" promptText="%textField.2.prompt">
+               <HBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Pixel Sans Serif Regular" size="64.0" />
+               </font>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+            <TextField fx:id="textFieldName3" alignment="CENTER" maxHeight="75.0" maxWidth="75.0" minHeight="75.0" minWidth="75.0" prefHeight="75.0" prefWidth="75.0" promptText="%textField.3.prompt">
+               <font>
+                  <Font name="Pixel Sans Serif Regular" size="64.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+               </padding>
+            </TextField>
+         </children>
+      </HBox>
+      <Button fx:id="buttonSave" disable="true" mnemonicParsing="false" onAction="#saveScore" text="%button.save">
+         <VBox.margin>
+            <Insets bottom="5.0" />
+         </VBox.margin>
+         <font>
+            <Font name="Pixel Sans Serif Regular" size="13.0" />
+         </font>
+      </Button>
+   </children>
+</VBox>

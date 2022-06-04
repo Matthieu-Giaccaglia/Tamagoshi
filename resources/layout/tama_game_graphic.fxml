@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane stylesheets="@../style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tamagoshi.controller.TamaGameController">
+   <top>
+       <MenuBar BorderPane.alignment="CENTER">
+           <Menu mnemonicParsing="false" text="%menu.game">
+               <MenuItem mnemonicParsing="false" onAction="#nouvellePartie" text="%menu.game.start" />
+            <MenuItem mnemonicParsing="false" onAction="#afficherMeilleursScores" text="%menu.game.score" />
+           </Menu>
+           <Menu mnemonicParsing="false" text="%menu.option">
+               <Menu fx:id="menuLangue" mnemonicParsing="false" text="%menu.option.language">
+                   <CheckMenuItem fx:id="menuLangue_en_EN" mnemonicParsing="false" onAction="#changerLangue" text="English" />
+                   <CheckMenuItem fx:id="menuLangue_fr_FR" mnemonicParsing="false" onAction="#changerLangue" text="Français" />
+               <CheckMenuItem fx:id="menuLangue_de_DE" mnemonicParsing="false" onAction="#changerLangue" text="Deutch" />
+               </Menu>
+               <CheckMenuItem fx:id="checkNomAleatoire" mnemonicParsing="false" onAction="#changerNomAleatoire" selected="true" text="%menu.option.randomName" />
+               <Menu fx:id="menuDifficulte" mnemonicParsing="false" text="%menu.option.difficulty">
+                   <CheckMenuItem fx:id="menuDifficulte_3" mnemonicParsing="false" onAction="#changerDifficulte" text="3" />
+                   <CheckMenuItem fx:id="menuDifficulte_4" mnemonicParsing="false" onAction="#changerDifficulte" text="4" />
+                   <CheckMenuItem fx:id="menuDifficulte_5" mnemonicParsing="false" onAction="#changerDifficulte" text="5" />
+                   <CheckMenuItem fx:id="menuDifficulte_6" mnemonicParsing="false" onAction="#changerDifficulte" text="6" />
+                   <CheckMenuItem fx:id="menuDifficulte_7" mnemonicParsing="false" onAction="#changerDifficulte" text="7" />
+                   <CheckMenuItem fx:id="menuDifficulte_8" mnemonicParsing="false" onAction="#changerDifficulte" text="8" />
+               </Menu>
+           </Menu>
+           <Menu mnemonicParsing="false" text="%menu.help">
+               <MenuItem mnemonicParsing="false" onAction="#afficherInformation" text="%menu.help.showMore" />
+               <MenuItem mnemonicParsing="false" onAction="#afficherRegles" text="%menu.help.help" />
+           </Menu>
+       </MenuBar>
+   </top>
+   <center>
+      <GridPane fx:id="gridPaneTama" BorderPane.alignment="CENTER">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="230.0" prefWidth="230.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="230.0" prefWidth="230.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="230.0" prefWidth="230.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="230.0" prefHeight="230.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="230.0" prefHeight="230.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="230.0" prefHeight="230.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+   </center>
+   <right>
+       <SplitPane dividerPositions="0.95" minWidth="-Infinity" orientation="VERTICAL" prefWidth="300.0" BorderPane.alignment="CENTER">
+           <AnchorPane minWidth="-Infinity" prefWidth="300.0">
+               <ScrollPane fx:id="scrollPane" layoutX="5.0" layoutY="10.0" minWidth="-Infinity" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                   <TextFlow fx:id="textFlow" prefWidth="280.0">
+                       <padding>
+                           <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                       </padding>
+                   </TextFlow>
+               </ScrollPane>
+           </AnchorPane>
+           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <TextField fx:id="textFieldUser" disable="true" promptText="%dialog.userDialog.disable" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font name="Pixel Sans Serif Regular" size="11.0" />
+               </font></TextField>
+           </AnchorPane>
+       </SplitPane>
+   </right>
+   <bottom>
+       <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>

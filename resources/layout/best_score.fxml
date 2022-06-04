@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="400.0" maxWidth="600.0" minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tamagoshi.controller.BestScoreController">
+   <children>
+      <TabPane prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="%tab.1">
+            <content>
+                  <VBox alignment="TOP_CENTER">
+                     <children>
+                        <Label text="%title">
+                           <font>
+                              <Font name="Pixel Sans Serif Regular" size="24.0" />
+                           </font>
+                        </Label>
+                        <Separator prefWidth="200.0" />
+                        <TextFlow fx:id="textFlowActualDifficulty" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="600.0" textAlignment="CENTER" />
+                     </children>
+                  </VBox>
+            </content>
+          </Tab>
+          <Tab closable="false" text="%tab.2">
+            <content>
+                  <VBox alignment="TOP_CENTER">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="%title" textAlignment="CENTER">
+                           <font>
+                              <Font name="Pixel Sans Serif Regular" size="24.0" />
+                           </font>
+                        </Label>
+                        <ScrollPane hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="330.0" prefWidth="600.0" VBox.vgrow="ALWAYS">
+                           <content>
+                              <TextFlow fx:id="textFlowAllDifficulty" maxWidth="-Infinity" minWidth="-Infinity" prefWidth="600.0" textAlignment="CENTER" />
+                           </content></ScrollPane>
+                     </children>
+                  </VBox>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
